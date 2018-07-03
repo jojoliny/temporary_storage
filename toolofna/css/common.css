@@ -1,0 +1,43 @@
+body,html{
+	height: 100%;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: black;
+}
+li{
+	list-style: none;
+}
+.bg-red{
+	background-color: #e74c4c !important;
+}
+.transform_-90deg{
+	transform:rotateX(-90deg);
+}
+.transform_0deg{
+	transform:!rotateX(0deg);
+}
+a{
+	text-decoration: none;
+}
+.font-white{
+	color: white;
+}
+/*@font-face {
+	font-family:"TrumpGothicEastBold";
+	src: url(../fonts/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2);
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Light Italic'), local('OpenSans-LightItalic'), url(../fonts/PRmiXeptR36kaC0GEAetxhgVThLs8Y7ETJzDCYFCSLE.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}*/
+@font-face {
+	font-family:"TrumpGothicEastBold";
+	src: url(../fonts/TRUMP_GOTHIC_EAST_BOLD_1.TTF);
+}

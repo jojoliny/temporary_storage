@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/common.js" ></script>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<script>
+			var canvas=$("#canvas");
+			canvas.width=600;
+			canvas.height=500;
+			canvas.style.border="1px black solid";
+			var cv=canvas.getContext("2d");
+			var i=1;
+			function overall(){
+				cv.beginPath();
+				cv.strokeStyle="black";
+				cv.lineWidth=2;
+				cv.strokeRect(30,30,500,50);
+				cv.closePath();
+				window.timer=setInterval(progress,100);
+			}
+			function progress(){
+				cv.beginPath();
+				cv.fillStyle="#c81623";
+				cv.fillRect(31,31,i,48);
+				i+=1;
+				if(i==499){
+					clearInterval(window.timer);
+				}
+			}
+			overall();
+		</script>
+	</body>
+</html>

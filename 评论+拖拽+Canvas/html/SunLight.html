@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+			}
+		</style>
+		<script type="text/javascript" src="../js/common.js" ></script>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<script>
+			var canvas=$("#canvas");
+			canvas.width=600;
+			canvas.height=500;
+			//画笔
+			var cv=canvas.getContext("2d");
+			cv.fillStyle="rgba(254,231,179,0.25)";
+			for (var i = 0; i < 10; i++) {
+				cv.beginPath();
+				cv.arc(i*40+25,i*30+25,i*10+20,0,2*Math.PI,true);
+				cv.fill();
+				
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

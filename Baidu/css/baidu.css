@@ -1,0 +1,210 @@
+*{
+	padding: 0;
+	margin:0;
+}
+html,body{
+	font-size: 1rem;
+    /*min-width: 1200px;*/
+    height: 100%;
+    overflow: auto;
+    font-family: Microsoft Yahei, Arial, Helvetica, sans-serif, serif;
+    position: relative;
+}
+.about-baidu {
+	border:none;
+	display: block;
+}
+.about-baidu>li.active>a{
+	border: none;
+}
+.nav-box{
+	padding: 0 1rem;
+}
+.logo{
+	height: 30px;
+	/*margin: 0 auto;*/
+}
+img{
+	vertical-align: middle;
+}
+.side-line{
+	display: block;
+    position: absolute;
+    border: 0;
+    height: 5px;
+    background-color: #48a5f4;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+.block{
+	display: block;
+	text-align: center;
+}
+.header{
+	font-size: 1.7rem;
+	/*line-height: 4rem;*/
+	height: 4rem;
+	vertical-align: middle;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	background-color: rgba(255,255,255,0.9);
+	width: 100%;
+}
+.header div{
+	height: 100%;
+}
+.logo-box{
+	vertical-align: middle;
+}
+/*--------banner--------*/
+.full-section {
+    width: 100%;
+}
+.main-body {
+    padding-top: 4rem;
+}
+.news-section{
+	background-color: #fafafa;
+}
+/*-------news---------*/
+.bd-home-news{
+	padding: 1em 0;
+}
+.swiper-slide{
+	width:100%
+	height: 100%;
+	position: relative;
+}
+.swiper-no-swiping{
+	width: 33%;
+	float: left;
+	padding: 0.5em;
+}
+img{
+	vertical-align: middle;
+}
+.swiper-slide a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+    color: #666666;
+}
+.swiper-slide a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.news-content{
+	width: 100%;
+	overflow: hidden;
+}
+.swiper-slide a:hover{
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    background-color: #CED9E8;
+    background-clip: content-box;
+    color: black;
+}
+.swiper-slide>a>span{
+	display: block;
+	position: absolute;
+	/*height: 20%;*/
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+    background: #ccd6e2;
+    padding: 15px 0;
+    bottom: 0;
+}
+/*---------百度动态--------*/
+.section-title{
+	font-size: 2.5em;
+	line-height: 1;
+	padding-bottom: 2.5rem;
+	padding-top: 5rem;
+	color: #969696;
+	letter-spacing: 0;
+	border-bottom: 1px #e8e8e9 solid;
+	text-align: center;
+}
+.dynamic-title{
+	line-height: 3;
+	font-size: 1.7rem;
+}
+.bd-home-dynamic-centent{
+	color: #505050;
+}
+.bd-dynamic-news, .bd-dynamic-topic {
+    font-size: 1.7rem;
+    color: #505050;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+    text-align: left;
+}
+li{
+	list-style: none;
+	list-style: -moz-none;
+}
+.news-list {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 1.3rem;
+    line-height: 3rem;
+}
+.news-box {
+    display: table-cell;
+    line-height: 3rem;
+    width: 80%;
+    vertical-align: middle;
+    color: #000;
+    padding-left: 15px;
+    position: relative;
+    border-radius: 2px;
+}
+a{
+	color: inherit !important;
+	/*text-decoration: none !important;*/
+}
+.decoration{
+    display: table-cell;
+    width: 10%;
+    position: relative;
+    vertical-align: middle;
+    color: #ccc;
+}
+.news-time{
+	display: block;
+    color: #999999;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+/*.news-item:hover,.news-item:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #64b7f7;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}*/
+.triangle-left{
+	color: transparent;
+}
+.news-item:hover .decoration,.news-item:hover .triangle-left{
+	color: #64b7f7;
+}
+.news-item:hover .news-box,.news-item:hover .news-time{
+	background-color: #64b7f7;
+	color: white;
+}
+.card-img-bottomly{
+    background: rgba(255, 255, 255, 0.8) !important;
+    color: #666666;
+}

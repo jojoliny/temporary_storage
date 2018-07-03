@@ -1,0 +1,56 @@
+html,body{
+	overflow: hidden;
+	background: url(../img/bg-pattern.gif);
+}
+.awards-header{
+	width: 90%;
+	margin: 90px auto ;
+	overflow: hidden;
+	position: relative;
+}
+.span-div{
+	width: 455px;
+	height: 300px;
+    font-family: "TrumpGothicEastBold", Arial, Helvetica, sans-serif;
+    font-size: 360px;
+    line-height: 300px;
+    color: #e74c4c;
+    position: relative;
+    display: inline-block;
+}
+.span-div>div{
+	width: 130px;
+	overflow: hidden;
+    float: left;
+    position: absolute;
+    bottom: 0;
+}
+.span-div>div>span{
+	display: block;
+}
+.span-div>.span_1{
+	left: 0;
+}
+.span-div>.span_2{
+	left: 175px;
+}
+.span-div>.span_3{
+	left: 350px;
+}
+.awards-header>h1{
+	display: inline-block;
+	float: right;
+	font-size: 270px;
+	line-height: 270px;
+	font-family: "TrumpGothicEastBold", Arial, Helvetica, sans-serif;
+    color: #2f2f2f;
+    border-bottom: 0.12em solid #2f2f2f;
+    line-height: 1em;
+    letter-spacing: 2px;
+    /*margin-top: -13px;*/
+    position: absolute;
+	top: 150px;
+	right: 0;
+	/*display: none;*/
+	opacity: 0;
+}

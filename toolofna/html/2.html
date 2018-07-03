@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>WORK</title>
+		<link rel="import" href="nav.html" />
+		<link rel="stylesheet" href="../css/2.css" />
+		<script type="text/javascript" src="../js/2.js" ></script>
+	</head>
+	<body>
+		<script>importHTML(".nav");chose=1;</script>
+		<div id="subnavi">
+			<ul id="tag-default-list">
+				<li><a href="javascript:void(0)">Featured</a></li>
+				<li><a href="javascript:void(0)">Live Action</a></li>
+				<li><a href="javascript:void(0)">VR-360</a></li>
+				<li><a href="javascript:void(0)">Experiental</a></li>
+				<li><a href="javascript:void(0)">Digital-Integrated</a></li>
+			</ul>
+		</div>
+		<div id="work">
+			<ul>
+				<li><i></i></li>
+				<li><i></i></li>
+				<li><i></i></li>
+				<li><i></i></li>
+				<li><i></i></li>
+				<li><i></i></li>
+			</ul>
+		</div>
+		<div class="scrollbar-fixed">
+			<div class="scrollbar">
+				<div class="scroller"></div>
+			</div>
+		</div>
+		
+		<script>
+			var workarea=document.querySelector("#work");
+			var num=document.querySelectorAll("#work li").length;
+			workarea.style.width=num*400+"px";
+		</script>
+		
+	</body>
+</html>

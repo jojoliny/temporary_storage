@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 800px;
+				height: 250px;
+				margin: 0 auto;
+			}
+			.src{
+				border: 1px solid grey;
+				font-size: 24px;
+				text-align: center;
+				line-height: 50px;
+			}
+			.dest{
+				margin-top: 20px;
+				
+				border: 1px solid grey;
+				text-align: center;
+			}
+			.dest span{
+				font-size: 50px ;
+				line-height: 250px;
+				font-family: "新宋体";
+			}
+			.bg_grey{
+				background-color: lightgrey;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="src">
+			<img src="../img/page1_img4.jpg" /><br />
+			<span>太阳尚远，但必有太阳</span>
+		</div>
+		<div class="dest bg_grey">
+			<span>请拖入要展示的内容</span>
+		</div>
+		<script type="text/javascript">
+			var dest=document.querySelector(".dest");
+			var span=document.querySelector(".dest span");
+			dest.addEventListener("dragenter",function(){
+				console.log("---");
+				
+				
+			});
+			dest.addEventListener("dragover",function(event){
+				event=event||window.event;
+				event.preventDefault();				
+			});
+			dest.addEventListener("dragenter",function(){
+				dest.classList.remove("bg_grey");
+			});
+			dest.addEventListener("dragleave",function(){
+				dest.classList.add("bg_grey");
+			});
+
+			dest.addEventListener("drop",function(event){
+				console.log("!!!")
+//				span.innerText="";
+				this.classList.add("bg_grey");
+				var files=event.dataTransfer.files;
+				if(files.length>0){
+					for (var i = 0; i < files.length; i++) {
+						console.log(files[i]);
+					}
+				}else{
+					//获取图片路径
+					var data=event.dataTransfer.getData("text/uri-list");
+					if(data){
+						var img=new Image();
+						img.src=data;
+						this.appendChild(img);
+					}else{
+						data=event.dataTransfer.getData("text");
+						span.innerHTML=data;
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

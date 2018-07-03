@@ -1,0 +1,220 @@
+.playbar{
+	width: 100%;
+	overflow: hidden;
+	background-color: #333;
+	position: absolute;
+	bottom: 0;
+}
+.wrap{
+	width: 980px;
+	height: 47px;
+	margin: 0 auto;
+}
+.btns{
+	width: 137px;
+	height: 100%;
+}
+.btns .pre{
+	width: 28px;
+	height: 28px;
+	background-image: url(../img/playbar.png);
+	background-position: 0 -130px;
+	margin-right: 8px;
+    margin-top: 11px;
+}
+.btns .pre:hover{
+	background-position: -30px -130px;
+}
+.btns .play{
+	width: 36px;
+	height: 36px;
+	background-image: url(../img/playbar.png);
+	background-position: 0 -204px;
+	margin-right: 8px;
+	margin-top: 6px;
+}
+.btns .play:hover{
+	background-position: -40px -204px;
+}
+.btns .next{
+	width: 28px;
+	height: 28px;
+	background-image: url(../img/playbar.png);
+	background-position: -80px -130px;
+	margin-right: 8px;
+    margin-top: 11px;
+}
+.btns .next:hover{
+	background-position: -110px -130px;
+}
+.btns li{
+	cursor: pointer;
+	float: left;
+}
+.bar-bg{
+	width: 493px;
+	height: 9px;
+	background-image: url(../img/statbar.png);
+	float: left;
+}
+.progress_bar{
+	width: 493px;
+	height: 9px;
+	background-image: url(../img/statbar.png);
+	background-position: 0 -66px;
+	position: relative;
+}
+.play_container .music_desc{
+    height: 28px;
+    width: 100%;
+    color: #e8e8e8;
+    text-shadow: 0 1px 0 #171717;
+    line-height: 28px;
+    float: left;
+    line-height: 28px;
+}
+.play_container{
+	width: 608px;
+	height: 37px;
+}
+.progress_btn{
+    width: 22px;
+    height: 24px;
+    background-image: url(../img/iconall.png);
+    background-position: 0 -250px;
+    position: absolute;
+    top: -7px;
+    right: -13px;
+    cursor: pointer;
+}
+.progress_btn{
+	background-position: 0 -280px;
+}
+.time{
+    color: #797979;
+    text-shadow: 0 1px 0 #121212;
+    position: absolute;
+    font-size: 12px;
+    top: -4px;
+    right: 25px;
+}
+.m-pbar{
+	width: 100%;
+	height: 9px;
+	position: relative;
+}
+.playbar .music_desc a{
+	float: left;
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+	margin-top: 2px;
+	margin-left: 8px;
+}
+.playbar .music_desc a:hover{
+	text-decoration: underline;
+}
+.playbar .music_desc .m_d_m{
+	width: 19px;
+	height: 17px;
+	background-image: url("../img/playbar.png");
+	background-position: 0 -56px;
+	margin-left: 3px;
+	margin-top: 7px;
+}
+.playbar .music_desc .m_d_m:hover{
+	background-position: -20px -56px;
+}
+.playbar .music_desc .m_d_g{
+	margin-left: 12px;
+	font-size: 12px;
+	color: #9b9b9b;
+}
+.headpic a{
+	display: block;
+	width: 34px;
+	height: 34px;
+	background-image: url("../img/pic3.jpg");
+	margin-top: 7px;
+	border-radius: 5px;
+	margin-right: 8px;
+}
+.oper{
+	width: 60px;
+	height: 100%;
+	float: left;
+}
+.ctrl{
+	width: 113px;
+	height: 100%;
+	float: left;
+}
+.voicebg .voicebar .volume{
+	position: absolute;
+	width: 4px;
+	height: 50%;
+	left: 0;
+	bottom: 0;
+	background-image: url(../img/playbar.png);
+    background-position:-40px bottom;
+}
+.ctrl{
+	position: relative;
+}
+.ctrl a{
+	float: left;
+	background-image: url("../img/playbar.png");
+	margin-top: 11px;
+}
+.ctrl .ctr_voice{
+	width: 25px;
+	height: 25px;
+	background-position: -2px -246px;
+	margin-right: 2px;
+}
+.ctrl .ctr_voice:hover{
+	background-position: -31px -246px;
+}
+.ctrl .ctr_type{
+	width: 25px;
+	height: 25px;
+	background-position: -3px -342px;
+}
+.ctrl .ctr_type:hover{
+	background-position: -33px -342px;
+}
+.ctrl .ctr_list{
+	width: 59px;
+	height: 25px;
+	background-position: -40px -67px;
+}
+.ctrl .ctr_list:hover{
+	background-position: -40px -97px;
+}
+.voicebg{
+    position: absolute;
+    width: 32px;
+    height: 113px;
+    background-image: url(../img/playbar.png);
+    left: 0;
+    top: -113px;
+    background-position: 0 -503px;
+	display: none;
+}
+.voicebg .voicebar{
+	position: absolute;
+	width: 4px;
+	height: 93px;
+	left: 14px;
+    top: 11px;
+}
+.voicebg .voicebar i{
+	position: absolute;
+	width: 18px;
+	height: 20px;
+	left: -7px;
+	top:-10px;
+	background-image: url(../img/iconall.png);
+	background-position: -40px -250px;
+	cursor: pointer;
+}

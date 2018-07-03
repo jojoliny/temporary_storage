@@ -1,0 +1,112 @@
+body{
+	background-image:url(../img/bg-pattern.gif) ;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+#directors-category-left,#directors-category-right{
+	background: transparent;
+	width: 480px;
+    /*height: 50%;*/
+   	overflow: hidden;
+	position: absolute;
+	top: 50%;
+    margin-top: -10%;
+    color: #2f2f2f;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+#directors-category-left{
+	text-align: left;
+	left: 5%;
+}
+#directors-category-right{
+	text-align: right;
+	right: 5%;
+}
+#directors-category-container h1{
+	font-family: "TrumpGothicEastBold", Arial, Helvetica, sans-serif;
+    letter-spacing: 26px;
+    line-height: 125px;
+    font-size: 125px;
+}
+#directors-category-container{
+	width: 100%;
+	height: 100%;
+}
+#bg-line-left,#bg-line-right{
+	height: 100%;
+	width: 0%;
+	background-color: #2F2F2F;
+	transform: skewX(-10deg);
+	position: absolute;
+	left: 50%;
+	z-index: 1;
+}
+/*初始效果*/
+/*中间条*/
+.line-center{
+	height: 100%;
+	width: 10px;
+	position: absolute;
+	z-index: 20;
+	transform: skewX(-10deg);
+	left: 50%;
+	background-color: black;
+	border: none;
+}
+.line-center-fill{
+	width: 100%;
+	background-color: white;
+	border: none;
+	animation: fill .6s forwards;
+}
+@keyframes fill{
+	from{height: 0;}
+	to{height: 100%;}
+}
+/*两侧往中间缩*/
+#bg-line-left,#bg-line-right{
+	width: 60%;
+}
+#bg-line-left{
+	animation: shrink-l .5 ;
+	left: -10%;
+	
+}
+#bg-line-right{
+	animation: shrink-r .5 ;
+	right:-10%;
+}
+
+@keyframes shrink-l{
+	from{
+			background-color: black;
+			width: 0;
+			left: "-15%";
+		}
+	to{
+		width: 100%;
+		left: "-15%";
+	  }
+}
+@keyframes shrink-r{
+	from{
+			background-color: black;
+			width: 0;
+			right: "-15%";
+		}
+	to{
+		width: 100%;
+		left: "50%";
+	  }
+}
+#directors-category-right p,#directors-category-left p{
+	width: 400px;
+	overflow: hidden;
+    color:  #9e9e9e;
+    margin-right: 26px;
+} 
+#directors-category-right p{
+	float: right;
+}

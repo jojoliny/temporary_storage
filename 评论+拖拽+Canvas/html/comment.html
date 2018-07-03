@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			article{
+				border-bottom:  1px dashed;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			用户：<input type="text" id="username"/><br />
+			评论：<input type="text" id="comment"/><br />
+			<input type="button" value="提交" id="submit"/>
+		</section>
+		<section class="comment_area" id="comment_area">
+			<!--评论区-->
+		</section>
+		<script type="text/javascript">
+			var username=document.getElementById("username");
+			var comm=document.getElementById("comment");
+			var btn=document.getElementById("submit");
+			var cm_area=document.getElementById("comment_area");
+			window.onload=function(){
+				for(var attr in sessionStorage){
+					insertComm(attr);
+				}
+			}
+			btn.onclick=function(){
+				console.log(username.value+" "+comm.value);
+				//将用户名和评论封装在json对象中
+				var obj={username:username.value,comm:comm.value};
+				//将json以字符串形式保存起来
+				var str=JSON.stringify(obj);
+				sessionStorage[comm]=str;
+				
+				insertComm(comm);
+				
+			}
+			function insertComm(attr){
+				//将str转化为json
+				console.log(sessionStorage[attr]);
+				var js=JSON.parse(sessionStorage[attr]);
+				var sc=document.createElement("article");
+				var un=document.createElement("h2");
+				var cm=document.createElement("p");
+				un.innerText=js.username;
+				cm.innerText=js.comm;
+				sc.appendChild(un);
+				sc.appendChild(cm);
+				console.log(sc);
+				cm_area.appendChild(sc);
+			}
+
+		</script>
+	</body>
+</html>

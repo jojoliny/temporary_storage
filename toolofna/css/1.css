@@ -1,0 +1,49 @@
+#view-real{
+	position: absolute;
+	top: 15%;
+	right: 0;
+	width: 240px;
+	height: 20px;
+	border: rgba(255, 255, 255, 0.5) solid 3px;
+	border-right: 0;
+	padding: 15px;
+	font-size: 16px;
+	cursor: pointer;
+    font-family: "TrumpGothicEastBold", Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 20px;
+    z-index: 50;
+    /*transition: hover .2s .35s;*/
+   transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+
+.content #view-real:before,.content #view-real:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	left: 0;
+	top: 0;
+	background-color: white;
+	z-index: -1;
+    transition: all 0.2s;
+    transform: scaleY(0);
+}
+.content #view-real::before{
+	transform-origin: bottom right;
+	top: 0;
+}
+.content #view-real::after{
+	transform-origin: top right;
+	top: 50%;
+}
+#view-real:hover{
+	color: black;
+}
+#view-real:hover:before,#view-real:hover:after{
+    transform: scaleY(1);
+}

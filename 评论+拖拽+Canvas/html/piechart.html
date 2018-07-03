@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/common.js" ></script>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<script>
+			var canvas=$("#canvas");
+			canvas.width=600;
+			canvas.height=400;
+			canvas.style.border="1px black solid";
+			var cv=canvas.getContext("2d");
+			var datas= [
+			      {value:0.2,color:"lightcoral",desc:"重庆"},
+			      {value:0.3,color:"lightblue",desc:"湖南"},
+			      {value:0.3,color:"lightpink",desc:"广西"},
+			      {value:0.2,color:"lemonchiffon",desc:"内蒙古"}
+			];
+			var circle=2*Math.PI;
+			var beginR=0;
+			var endR=0;
+			var radius=0;
+			for (var i = 0; i < datas.length; i++) {
+				endR=datas[i].value+beginR;
+				cv.beginPath();
+				console.log(datas[i].value);
+				cv.fillStyle=datas[i].color;
+				cv.moveTo(200,200);
+				cv.arc(200,200,100,circle*beginR,circle*endR,false);
+				cv.fill();
+				
+				//文字绘制
+				cv.font="16px '微软雅黑'";
+				cv.fillStyle="black";
+				radius=(endR-beginR)/2+endR;
+				cv.fillText(datas[i].desc,200+120*Math.cos(circle*radius),200+120*Math.sin(circle*radius));
+				beginR=endR;
+			}
+
+		</script>
+	</body>
+</html>

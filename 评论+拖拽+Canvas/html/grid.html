@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/common.js" ></script>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<script>
+			var canvas=$("#canvas");
+			canvas.width=600;
+			canvas.height=400;
+			canvas.style.border="1px black solid";
+			var cv=canvas.getContext("2d");
+			cv.strokeStyle="black";
+			cv.lineWidth=1;
+			for (var i = 0; i < 400; i=i+8) {
+				cv.beginPath();
+				cv.moveTo(0,i);
+				cv.lineTo(600,i);
+				cv.stroke();
+			}
+			for (var i = 0; i < 600; i=i+8) {
+				cv.beginPath();
+				cv.moveTo(i,0);
+				cv.lineTo(i,400);
+				cv.stroke();
+			}
+			//画直角坐标系
+			function coordinate(){
+				cv.beginPath();
+				cv.strokeStyle="red";
+				cv.lineWidth=2;
+				cv.moveTo(32,40);
+				cv.lineTo(32,360);
+				cv.lineTo(568,360);
+				cv.stroke();
+				//折线
+				cv.beginPath();
+				cv.strokeStyle="blue";
+				cv.lineWidth=2;
+				cv.moveTo(32,360);
+				cv.lineTo(120,140);
+				cv.lineTo(180,110);
+				cv.lineTo(270,270);
+				cv.lineTo(360,300);
+				cv.stroke();
+			}
+			coordinate();
+		</script>
+	</body>
+</html>
