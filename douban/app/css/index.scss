@@ -1,0 +1,23 @@
+.thumbnail{
+  .caption{
+    .title{
+      font-size: 1.8em;
+      span:nth-of-type(1){
+        color:#37a;
+      }
+      span:nth-of-type(2){
+        color:#e09015;
+        float: right;
+      }
+    }
+    .content{
+      span:nth-of-type(2n+1){
+        color:#aaa;
+      }
+    }
+  }
+}
+
+.text-center{
+  text-align: center;
+}

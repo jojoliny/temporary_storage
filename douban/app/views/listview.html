@@ -1,0 +1,42 @@
+<section class="container">
+    <div class="page-header">
+        <h1>{{title}}</h1>
+    </div>
+    <div class="row ">
+        <div class="col-sm-12 col-md-6" ng-repeat="movie in movielist" ng-click="skip(movie.id)">
+            <div class="thumbnail">
+                <img ng-src="{{movie.images.small}}">
+                <div class="caption">
+                    <p class="title"><span>{{movie.title}}</span><span class="point">{{movie.rating.average}}</span></p>
+                    <p class="content">
+                        <span>导演:</span><span><span ng-repeat="director in movie.directors">&nbsp&nbsp<a href="javascript:void(0)">{{director.name}}</a></span></span><br>
+                        <span>类型:</span><span><span ng-repeat="type in movie.genres">&nbsp&nbsp<a href="javascript:void(0)">{{type}}</a></span></span><br>
+                        <span>又名:</span>&nbsp&nbsp<span>{{movie.original_title}}</span><br>
+                        <span>剧情简介:</span>&nbsp&nbsp<span>无</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <nav aria-label="Page navigation" class="text-center">
+        <ul class="pagination">
+            <li>
+                <a href="javascript:void(0)" aria-label="Previous" ng-click="pre()">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="javascript:void(0)" aria-label="Next" ng cl>
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</section>

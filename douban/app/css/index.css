@@ -1,0 +1,14 @@
+.thumbnail .caption .title {
+  font-size: 1.8em; }
+  .thumbnail .caption .title span:nth-of-type(1) {
+    color: #37a; }
+  .thumbnail .caption .title span:nth-of-type(2) {
+    color: #e09015;
+    float: right; }
+.thumbnail .caption .content span:nth-of-type(2n+1) {
+  color: #aaa; }
+
+.text-center {
+  text-align: center; }
+
+/*# sourceMappingURL=index.css.map */
